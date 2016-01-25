@@ -43,6 +43,26 @@ test <- cbind(testSubjects, testActivities, test)
 # merge datasets and add labels
 allData <- rbind(train, test)
 colnames(allData) <- c("subject", "activity", featuresWanted.names)
+colNames  = colnames(allData);
+
+for (i in 1:length(colNames)) 
+{
+  colNames[i] = gsub("\\()","",colNames[i])
+  colNames[i] = gsub("-std$","StdDev",colNames[i])
+  colNames[i] = gsub("-mean","Mean",colNames[i])
+  colNames[i] = gsub("^(t)","time",colNames[i])
+  colNames[i] = gsub("^(f)","freq",colNames[i])
+  colNames[i] = gsub("([Gg]ravity)","Gravity",colNames[i])
+  colNames[i] = gsub("([Bb]ody[Bb]ody|[Bb]ody)","Body",colNames[i])
+  colNames[i] = gsub("[Gg]yro","Gyro",colNames[i])
+  colNames[i] = gsub("AccMag","AccMagnitude",colNames[i])
+  colNames[i] = gsub("([Bb]odyaccjerkmag)","BodyAccJerkMagnitude",colNames[i])
+  colNames[i] = gsub("JerkMag","JerkMagnitude",colNames[i])
+  colNames[i] = gsub("GyroMag","GyroMagnitude",colNames[i])
+}; 
+
+colnames(allData) <- colNames;
+
 
 # turn activities & subjects into factors
 allData$activity <- factor(allData$activity, levels = activityLabels[,1], labels = activityLabels[,2])
