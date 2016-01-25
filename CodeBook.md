@@ -7,8 +7,8 @@ activity - The type of activity performed when the corresponding measurements we
 
  Measurements
 
-   * tBodyAccMeanX
-   *    tBodyAccMeanY
+*tBodyAccMeanX*
+tBodyAccMeanY
 tBodyAccMeanZ
 tBodyAccStdX
 tBodyAccStdY
