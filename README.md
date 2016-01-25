@@ -1,4 +1,4 @@
-"# Getting-and-cleaning- Data project
+ Getting-and-cleaning- Data project
 
 This is the course project for the Getting and Cleaning Data Coursera course. 
 
@@ -13,4 +13,4 @@ Creates a tidy dataset that consists of the average (mean) value of each variabl
 The end result is shown in the file tidy.txt.
 
 
-" 
+
